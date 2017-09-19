@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class ControlStructures {
     public static void main(String[] args) {
         // System.out.println("5" == 5); //  no need for identical operation like in JS
+
         System.out.println(3 == 5);
         System.out.println(3.5 >= 5);
 
@@ -103,5 +104,20 @@ public class ControlStructures {
         } else {
             System.out.println("nay");
         }
+
+        // Continue
+        for(int counter = 0; counter <= 10;counter++){
+            if(counter == 5){
+                System.out.println("Five");
+                continue;
+            } else if(counter == 8){
+                System.out.println("Ocho");
+                continue;
+            }
+
+            System.out.println("counter = " + counter);
+        }
+
+
     }
 }
