@@ -10,13 +10,18 @@
  * - server (object that does an operation on behalf of another object)
  */
 public class Person {
+    // class or static variables
+    public static int population = 0; // shared
+
+    // instance or object variables
     private String firstName;
     private String lastName;
 
-    public /* no return type*/ Person /* the same as the class */(
-        String aFirstName, String aLastName
+    public  Person (
+        String aFirstName, String aLastName  // constructor parameters
     ) {
-        firstName = aFirstName;
+        population++;
+        firstName = aFirstName; // local variable
         lastName = aLastName;
     }
 
