@@ -10,6 +10,17 @@
  * - server (object that does an operation on behalf of another object)
  */
 public class Person {
-    public String firstName;
-    public String lastName;
+    private String firstName;
+    private String lastName;
+
+    public /* no return type*/ Person /* the same as the class */(
+        String aFirstName, String aLastName
+    ) {
+        firstName = aFirstName;
+        lastName = aLastName;
+    }
+
+    public String fullName() {
+        return firstName + " " + lastName;
+    }
 }

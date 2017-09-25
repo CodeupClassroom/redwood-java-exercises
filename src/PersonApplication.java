@@ -4,13 +4,14 @@
 
 public class PersonApplication {
     public static void main(String[] args) {
-        Person person = new Person();
+        Person person = new Person("Zach", "Gulde"); // Default constructor
+
         // API - Application Programming Interface
         // REST API - Remote program
         // Object API  - Any public attribute/method
-        person.firstName = "Zach";
-        person.lastName = "Gulde";
+        // person.firstName = "Zach"; // no longer valid
+        // person.lastName = "Gulde"; // no longer valid
 
-        System.out.println(person.firstName + " " +  person.lastName);
+        System.out.println(person.fullName());
     }
 }
