@@ -12,7 +12,7 @@ public class Student {
     }
 
     public Student(String name, String cohort) {
-        this.name = name;
+        this(name); // This is calling the constructor with one argument
         this.cohort = cohort;
     }
 
