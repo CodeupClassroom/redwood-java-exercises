@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class ArraysLesson {
     public static void main(String[] args) {
+
         Person[] people;
         people = new Person[4]; // the length, which is 1 greater than the highest index
 
@@ -44,6 +45,34 @@ public class ArraysLesson {
 
         System.out.println("foods: " + Arrays.toString(foods));
         System.out.println("suggested foods: " + Arrays.toString(suggestedFoods));
+
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9},
+                {10, 11, 12}
+        };
+
+        System.out.println(matrix[1][2]);
+
+        int counter = 0;
+
+        for(int[] number : matrix){
+            counter++;
+            if(counter == 4){
+                number[1] = 20;
+                System.out.println(number[1]);
+            }
+
+        }
+
+        for(int[] row: matrix){
+            for(int col: row){
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+
     }
 }
 
