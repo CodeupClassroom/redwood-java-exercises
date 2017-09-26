@@ -21,7 +21,9 @@ public class Input {
 
     public int getInt() {
         if (this.scanner.hasNextInt()) {
-            return this.scanner.nextInt();
+            int input = this.scanner.nextInt();
+            scanner.nextLine();
+            return input;
         } else {
             System.out.println("That's not an integer! Try again.");
             scanner.nextLine();
