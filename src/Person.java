@@ -1,31 +1,38 @@
-/*
- * This source file is subject to the license that is bundled with this package in the file LICENSE.
- */
-
-/*
- * - public -> anyone has access to this class/attribute/function
- * - private ->  no-one can see this class/attribute/function
- *
- * - client (object that calls a method on another object)
- * - server (object that does an operation on behalf of another object)
- */
 public class Person {
-    // class or static variables
-    public static int population = 0; // shared
+    private String name;
 
-    // instance or object variables
-    private String firstName;
-    private String lastName;
-
-    public  Person (
-        String aFirstName, String aLastName  // constructor parameters
-    ) {
-        population++;
-        firstName = aFirstName; // local variable
-        lastName = aLastName;
+    public Person(String name) {
+        this.name = name;
     }
 
-    public String fullName() {
-        return firstName + " " + lastName;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void sayHello() {
+        System.out.println("Hello, " + this.name + ", nice to see you!");
+    }
+
+    public static void main(String[] args) {
+//        Person person = new Person("Zach");
+//        person.setName("Alex");
+//        person.sayHello();
+//        System.out.println(person.getName());
+
+        Person person1 = new Person("John");
+        Person person2 = person1;
+
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+
+        person2.setName("Jane");
+
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+
     }
 }
