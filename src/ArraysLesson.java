@@ -1,3 +1,4 @@
+import superclasses.Person;
 import util.Input;
 
 import java.util.Arrays;

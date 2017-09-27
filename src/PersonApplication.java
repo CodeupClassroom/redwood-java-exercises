@@ -4,10 +4,10 @@
 
 public class PersonApplication {
     public static void main(String[] args) {
-//        Person person = new Person("Zach", "Gulde"); // Default constructor
-//        System.out.println(Person.population);
-//        Person ryan = new Person("Ryan", "Orsinger"); // Default constructor
-//        System.out.println(Person.population);
+//        superclasses.Person person = new superclasses.Person("Zach", "Gulde"); // Default constructor
+//        System.out.println(superclasses.Person.population);
+//        superclasses.Person ryan = new superclasses.Person("Ryan", "Orsinger"); // Default constructor
+//        System.out.println(superclasses.Person.population);
 //
 //        System.out.println(person.fullName());
 
