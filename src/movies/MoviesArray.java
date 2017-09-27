@@ -99,7 +99,7 @@ public class MoviesArray {
                 new Movie("Goodfellas", "drama"),
                 new Movie("Pulp Fiction", "drama"),
                 new Movie("The Searchers", "drama"),
-                new Movie("Bringing Up Baby", "drama"),
+                new Movie("Bringing Up inheritance.Baby", "drama"),
                 new Movie("Unforgiven", "drama"),
                 new Movie("Guess Who's Coming To Dinner", "drama"),
                 new Movie("Yankee Doodle Dandy", "musical")
