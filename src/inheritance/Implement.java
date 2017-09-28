@@ -5,7 +5,6 @@ import superclasses.Person;
 public class Implement {
 
     public static void main(String[] args) {
-
         final String numberOfPeople = "192.";
 
         // This is a constant and the value doesn't chance
@@ -21,8 +20,5 @@ public class Implement {
         Baby lucy = new Baby("Lucy");
         lucy.cry();
 
-
-
     }
-
 }
