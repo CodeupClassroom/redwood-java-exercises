@@ -2,7 +2,7 @@ package inheritance;
 
 import superclasses.Person;
 
-public class Employee extends Person {
+abstract class Employee extends Person {
 
     private double salary;
 
@@ -20,12 +20,11 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    public void work(){
-        System.out.println(super.getName() + " is working" );
-    }
+    abstract public void work();
 
     public void sayHello() {
         System.out.println("Hello, " + super.getName() + ", how can i help you with!");
     }
+
 
 }
