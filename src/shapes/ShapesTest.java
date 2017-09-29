@@ -2,19 +2,12 @@ package shapes;
 
 public class ShapesTest {
     public static void main(String[] args) {
+        Measurable myShape;
 
-        Rectangle rec = new Rectangle(4, 5);
+        myShape = new Quadrilateral(5, 4);
 
-        Rectangle sqr = new Square(5);
-
-        Rectangle[] recs = {rec, sqr};
-
-        for (Rectangle r : recs){
-            System.out.println(r.getArea());
-            System.out.println(r.getPerimeter());
-        }
-
-
+        System.out.println("area: " + myShape.getArea());
+        System.out.println("perimeter: " + myShape.getPerimeter());
 
     }
 }
