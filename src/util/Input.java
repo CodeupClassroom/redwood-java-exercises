@@ -20,15 +20,25 @@ public class Input {
     }
 
     public int getInt() {
-        if (this.scanner.hasNextInt()) {
-            int input = this.scanner.nextInt();
-            scanner.nextLine();
+
+        try{
+            int input = Integer.valueOf(getString());
             return input;
-        } else {
+        }catch(NumberFormatException e){
+            System.out.println(e.getMessage());
             System.out.println("That's not an integer! Try again.");
-            scanner.nextLine();
             return getInt();
         }
+
+//        if (this.scanner.hasNextInt()) {
+//            int input = this.scanner.nextInt();
+//            scanner.nextLine();
+//            return input;
+//        } else {
+//            System.out.println("That's not an integer! Try again.");
+//            scanner.nextLine();
+//            return getInt();
+//        }
 
     }
 
@@ -44,13 +54,24 @@ public class Input {
     }
 
     public double getDouble() {
-        if (this.scanner.hasNextDouble()) {
-            return this.scanner.nextDouble();
-        } else {
+
+        try{
+            double input = Double.valueOf(getString());
+            return input;
+        }catch(NumberFormatException ex){
+            System.out.println(ex.getMessage());
             System.out.println("That's not an double! Try again.");
-            scanner.nextLine();
             return getDouble();
         }
+
+//        if (this.scanner.hasNextDouble()) {
+//            return this.scanner.nextDouble();
+
+//        } else {
+//            System.out.println("That's not an double! Try again.");
+//            scanner.nextLine();
+//            return getDouble();
+//        }
     }
 
     public double getDouble(double min, double max) {
