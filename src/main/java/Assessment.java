@@ -3,6 +3,10 @@
  */
 package main.java;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Assessment {
     /*
      * Write a static method called `square(number)` accepts an integer as input
@@ -34,6 +38,22 @@ public class Assessment {
         return sum / arrayOfIntegers.length;
     }
 
+    public static List<User> capitalizeRecords(List<User> users) {
+        List<User> capitalizedUsers = new ArrayList<>(users);
+        for (User user: users) {
+            String firstName = user.getFirstName();
+            if (!Character.isUpperCase(firstName.charAt(0))) {
+                user.setFirstName(firstName.substring(0, 1).toUpperCase() + firstName.substring(1));
+            }
+
+            String lastName = user.getLastName();
+            if (!Character.isUpperCase(lastName.charAt(0))) {
+                user.setLastName(lastName.substring(0, 1).toUpperCase() + lastName.substring(1));
+            }
+        }
+        return capitalizedUsers;
+    }
+
     public static void main(String[] args) {
         System.out.println("The square of 3 is " + square(3));
         System.out.println("The square of -2 is " + square(-2));
@@ -46,5 +66,18 @@ public class Assessment {
 
         int[] numbers = {1, 2, 3};
         System.out.println("The average of [1, 2, 3] is " +  average(numbers));
+
+        List<User> users = Arrays.asList(
+            new User("luis", "montealegre", false),
+            new User("justin", "reich", true),
+            new User("ryan", "orsinger", false),
+            new User("zach", "gulde", true),
+            new User("fernando", "mendoza", false)
+        );
+
+        System.out.println("This is the original list");
+        System.out.println(Arrays.toString(users.toArray()));
+        System.out.println("This is the capitalized list");
+        System.out.println(Arrays.toString(capitalizeRecords(users).toArray()));
     }
 }

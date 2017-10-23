@@ -17,4 +17,9 @@ public class User extends Person {
     public boolean isAdmin() {
         return isAdmin;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s is administrator? %b", firstName, lastName, isAdmin);
+    }
 }
