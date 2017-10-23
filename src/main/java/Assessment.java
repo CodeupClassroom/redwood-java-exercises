@@ -20,6 +20,14 @@ public class Assessment {
         return number1 + number2;
     }
 
+    public static double average(int[] arrayOfIntegers) {
+        double sum = 0.0;
+        for (int number: arrayOfIntegers) {
+            sum += number;
+        }
+        return sum / arrayOfIntegers.length;
+    }
+
     public static void main(String[] args) {
         System.out.println("The square of 3 is " + square(3));
         System.out.println("The square of -2 is " + square(-2));
@@ -29,5 +37,8 @@ public class Assessment {
         System.out.println("Tests for sum using floats");
         System.out.println("4.5 + (-15.5) is " + sum(4.5f, -15.5f));
         System.out.println("(-4.4) + (-4.6) is " + sum(-4.4f, -4.6f));
+
+        int[] numbers = {1, 2, 3};
+        System.out.println("The average of [1, 2, 3] is " +  average(numbers));
     }
 }
