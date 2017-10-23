@@ -22,4 +22,24 @@ public class Person {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
+    /*
+     * Write a getter and setter for the firstName property as well as a getter and setter for
+     * lastName.
+     */
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
