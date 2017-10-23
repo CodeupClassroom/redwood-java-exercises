@@ -14,4 +14,9 @@ public class User extends Person {
         super(firstName, lastName);
         this.isAdmin = isAdmin;
     }
+
+    /* Returns a boolean if the contact is an administrator */
+    public boolean isAdmin() {
+        return isAdmin;
+    }
 }
