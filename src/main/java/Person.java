@@ -4,7 +4,7 @@
 package main.java;
 
 /* Create a class named Person inside of src/main/java */
-public class Person {
+public class Person implements Greeter {
     /* Add firstName and lastName as protected properties. */
     protected String firstName;
     protected String lastName;
@@ -23,10 +23,17 @@ public class Person {
         this.lastName = lastName;
     }
 
+    /* "Hello from firstName lastName" */
+    @Override
+    public String sayHello() {
+        return String.format("Hello from %s, %s", firstName, lastName);
+    }
+
     /*
      * Write a getter and setter for the firstName property as well as a getter and setter for
      * lastName.
      */
+
     public String getFirstName() {
         return firstName;
     }
