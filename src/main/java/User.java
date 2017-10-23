@@ -1,8 +1,6 @@
-/*
+package main.java;/*
  * This source file is subject to the license that is bundled with this package in the file LICENSE.
  */
-
-import main.java.Person;
 
 /* Create a class called User that inherits from Person */
 public class User extends Person {
