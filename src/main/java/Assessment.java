@@ -12,14 +12,20 @@ public class Assessment {
         return number * number;
     }
 
+    /* Write a static method sum(param1, param2) that works with integers */
     public static int sum(int number1, int number2) {
         return number1 + number2;
     }
 
+    /* Write a static method sum(param1, param2) that works with doubles */
     public static float sum(float number1, float number2) {
         return number1 + number2;
     }
 
+    /*
+     * Write a static method called average(arrayOfIntegers) that takes in an array of integers and
+     * returns the average as a double
+     */
     public static double average(int[] arrayOfIntegers) {
         double sum = 0.0;
         for (int number: arrayOfIntegers) {
