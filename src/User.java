@@ -9,7 +9,9 @@ public class User extends Person {
     /* Add a protected property called isAdmin that is a boolean */
     protected boolean isAdmin;
 
-    public User(String firstName, String lastName) {
+    /* Accept a 3rd parameter, a boolean of whether or not that user is an administrator */
+    public User(String firstName, String lastName, boolean isAdmin) {
         super(firstName, lastName);
+        this.isAdmin = isAdmin;
     }
 }
